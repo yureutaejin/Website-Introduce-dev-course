@@ -1,0 +1,4 @@
+# ignore DS_Store
+.DS_Store
+# ignore node_modules
+frontend/node_modules/
