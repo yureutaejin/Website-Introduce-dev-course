@@ -8,6 +8,5 @@ carrers.forEach(function(element){
 
 function move_page(page_name, obj){
     page_name = (page_name.replace(/(\s*)/g, "")).toLowerCase();
-    alert(`${now_link}${obj}/${page_name}`);
-    window.open(now_link+obj+"/"+page_name);
+    window.location.replace(now_link+obj+"/"+page_name+"#carrer");
 };

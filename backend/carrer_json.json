@@ -1,0 +1,45 @@
+{
+    "frontenddeveloper" : {
+        "real_name": "Frontend Developer",
+        "simple_explane" : "프론트엔드는 사용자가 볼 수 있는 화면, 즉 사용자 인터페이스(User Interface, UI)를 말하는데요. \n 프론트엔드는 사람들이 웹 애플리케이션을 쉽게 사용할 수 있도록 기술적으로 구현되어 있어야 합니다. 그래야 사람들이 많이 사용할 것이고, 많이 사용하는 서비스가 곧 시장에서 경쟁력 있는 서비스가 되기 때문입니다. 따라서 프론트엔드 개발자는 웹 애플리케이션의 사용자 인터페이스와 사용자 경험(User Experience, UX) 최적화에 초점을 맞추어 서비스를 개발해야 합니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/ED2rOHM1od0",
+        "curriculum_image" : "https://roadmap.sh/pdfs/frontend.pdf",
+        "base_curriculum_image" : "https://www.angularminds.com/angular-minds-admin/uploads/blog_images/d4e7f08b71cf52785843342351f223f1.png"
+    },
+    "backenddeveloper" : {
+        "real_name": "Backend Developer",
+        "simple_explane" : "백엔드는 웹 애플리케이션의 사용자가 보지 못하는 영역인 서버나 데이터베이스를 관리하는 기술입니다. 프론트엔드는 사용자가 웹 서비스를 편하게 이용할 수 있도록 사용자 인터페이스를 다룬다면, 백엔드는 실질적으로 사용자들이 원하는 정보를 제공할 수 있도록 데이터를 관리하거나 서버를 운영하는 일을 합니다. 다시 말해, 백엔드는 프론트엔드에 있는 사용자들이 하고자 하는 행동을 처리하는 것입니다. 따라서 백엔드 개발자는 시스템 컴포넌트 작업, API작성, 라이브러리 생성, 데이터베이스 통합 등 다양한 개발 활동을 하게 됩니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/ED2rOHM1od0",
+        "curriculum_image" : "https://roadmap.sh/pdfs/backend.pdf",
+        "base_curriculum_image" : "https://www.angularminds.com/angular-minds-admin/uploads/blog_images/d4e7f08b71cf52785843342351f223f1.png"
+    },
+    "datascientist" : {
+        "real_name": "Data Scientist",
+        "simple_explane" : "데이터 사이언티스트는 데이터를 관리하고 분석하여 비즈니스 문제를 해결하기 위한 다양한 기술 및 도메인 기반 기술을 필요로 하는 직업입니다. 일부 수학자, 일부 비즈니스 분석가 및 일부 컴퓨터 과학자가 포함됩니다. 훌륭한 데이터 사이언티스트는 데이터의 추세와 패턴을 알아볼 수 있으며 데이터를 사용하여 유용하고 실행 가능한 결과를 생성하는 방법을 알고 있습니다. 데이터 사이언티스트는 현대 비즈니스의 최전선에서 업무 방식을 변화시킵니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/nPjsKGi1EIQ",
+        "curriculum_image" : "https://www.analyticsvidhya.com/wp-content/uploads/2020/11/DS-roadmap-1-2.pdf",
+        "base_curriculum_image" : "https://camo.githubusercontent.com/95aa0211d45073d332256bcdc05df3490d5366c7f34956278ba785f485bf63ab/68747470733a2f2f7777772e657863656c722e636f6d2f6173736574732f61646d696e2f636b66696e6465722f7573657266696c65732f696d616765732f6e6577732f436f6e63657074732532302832292e6a7067"
+    },
+    "mobileapplicationdeveloper" : {
+        "real_name": "Mobile Application Developer",
+        "simple_explane" : "스마트폰 앱 개발자는 앱(애플리케이션의 줄인 말, 스마트폰에 다운로드해 사용할 수 있는 응용프로그램을 통칭하는 의미) 프로그램의 아이템을 기획하고 개발하는 일을 합니다. 하나의 앱은 보통 기획, 디자인, 개발의 과정을 거쳐 만들어집니다. 먼저 아이디어를 바탕으로 기존 앱과의 차별성, 시장성, 기술적 구현 가능성 등을 판단하여 앱의 개발 여부를 결정합니다. 앱을 만들기로 결정하였다면 앱의 목표 기능, 디자인 등을 정하여 앱을 개발합니다. 개발이 완료되면 내부에서 테스트를 실시하여 오류나 강화할 사항을 확인하고, 앱을 판매하는 스토어에 등록합니다. 사용자들에게 서비스를 하면서 앱의 오류를 지속적으로 수정하고 최신 버전으로 업데이트하는 등의 관리도 스마트폰 앱 개발자의 업무입니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/UK893WOgDew",
+        "curriculum_image" : "https://indiespring.com/wp-content/uploads/IS_AppEconomy_report.pdf",
+        "base_curriculum_image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6PEUGgXZXnOsK1ZezMKY7OaOzNmkEIt0ITg&usqp=CAU"
+    },
+    "devopsengineer" : {
+        "real_name": "Devops Engineer",
+        "simple_explane" : "DevOps 엔지니어는 프로세스, 툴, 방법론을 도입하여 코딩에서 배포, 유지관리 및 업데이트에 이르는 소프트웨어 개발 라이프사이클 전체에 걸쳐 요구 사항 간의 균형을 맞춥니다. 개발 팀과 IT 운영팀의 기술과 목표는 서로 다를 수 있습니다. 개발자는 애플리케이션에 새로운 기능을 도입하길 원하는 반면, 운영팀은 애플리케이션 출시 후 안정성을 유지하고자 합니다. 결국 DevOps에서는 프로세스의 통일 및 자동화가 핵심이며 DevOps 엔지니어는 코드, 애플리케이션 유지관리, 애플리케이션 관리를 통합하는 데 중요한 역할을 합니다. 이 모든 태스크에는 개발 라이프사이클에 대한 이해뿐 아니라 DevOps 문화와 그 철학, 사례, 툴이 필요합니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/QAj3fsttKM4",
+        "curriculum_image" : "https://roadmap.sh/pdfs/devops.pdf",
+        "base_curriculum_image" : "https://miro.medium.com/max/1010/1*QNwZhE9HAJAWSi__0fnMhw.png"
+    },
+    "gamedeveloper" : {
+        "real_name": "Mobile Application Developer",
+        "simple_explane" : "게임프로그래머는 게임의 전체 구조를 설계하고, 사운드 효과와 그래픽 데이터를 통합하여 게임을 완성하는 일을 합니다. 게임프로그래머는 ‘게임서버프로그래머’와 ‘게임클라이언트프로그래머’로 구분합니다. ‘게임서버프로그래머’는 온라인 네트워크와 데이터베이스 관련 프로그래밍을 작업합니다. 이는 여러 게임 플레이어가 인터넷을 통해 같이 게임을 할 수 있도록 가상 공간을 만드는 작업입니다. ‘게임클라이언트프로그래머’는 컴퓨터에서 직접 실행되는 프로그램을 만듭니다. 게임상에서 각 유닛의 이동이나 전투 등 눈에 보이는 모든 부분을 개발하는 프로그래머입니다.",
+        "basic_youtube" : "https://www.youtube.com/embed/aWr95b6e73I",
+        "curriculum_image" : "https://users.cs.northwestern.edu/~hunicke/pubs/gdmag_career_guide_feature.pdf",
+        "base_curriculum_image" : "https://miro.medium.com/max/1400/1*sjwXR3a0wRPGLWaOGOuWow.png"
+    }
+
+}
