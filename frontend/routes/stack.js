@@ -39,7 +39,7 @@ router.get("/", (req, res) => {
 router.get("/:name", (req, res) => {
 
     console.log(`${req.params.name}`);
-    back_url = `http://127.0.0.1:50569/api/stack/${req.params.name}`;
+    back_url = `http://127.0.0.1:8001/api/stack/${req.params.name}`;
 
     obj = JSON.parse((request('GET', back_url)).getBody().toString());
     

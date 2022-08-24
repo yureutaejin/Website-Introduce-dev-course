@@ -56,3 +56,4 @@ docker run -it -d -p [local port2]:5000 --name introduce_dev_back introducedevpr
 
 실행이 되지 않는다면 각 container에 docker attach로 접근하고 프론트는 npm start, 백은 python server.py 하시면 됩니다.
 이후엔 127.0.0.1:[local port1]으로 접근하면 됩니다.
+서버 배포의 경우에, 포트포워딩에 따라 달라질 수 있는데. carrer.js랑 stack.js의 back_url 변수 값을 변경해주시면 됩니다. 백엔드에서 curl http://{api 주소} 로 먼저 return 값이 나오는지 확인해보세요. 나온다면 해당 주소로 back_url을 변경해주면 됩니다.
