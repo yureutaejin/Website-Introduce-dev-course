@@ -11507,3 +11507,42 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.stack .stack-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.stack .stack-item .stack-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(26, 188, 156, 0.9);
+}
+.stack .stack-item .stack-item-caption:hover {
+  opacity: 1;
+}
+.stack .stack-item .stack-item-caption .stack-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.stack-modal .btn-close {
+  color: #1abc9c;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.stack-modal .stack-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .stack-modal .stack-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}

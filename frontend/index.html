@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#carrer">Carrer</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#tool">Tool</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Stack">Stack</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about page">About Page</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about me">About Me</a></li>
                     </ul>
@@ -121,6 +121,60 @@
                 </div>
             </div>
         </section>
+
+        <!-- Stack Section-->
+        <section class="page-section stack" id="Stack">
+            <div class="container">
+                <!-- stack Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Stack</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- stack Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- stack Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="stack-item mx-auto">
+                            <div class="stack-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="stack-item-caption-content text-center text-white"><i>Python</i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/stack/python.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- stack Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="stack-item mx-auto">
+                            <div class="stack-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="stack-item-caption-content text-center text-white"><i>Java Script</i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/stack/javascript.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- stack Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="stack-item mx-auto">
+                            <div class="stack-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="stack-item-caption-content text-center text-white"><i>React</i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/stack/react.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- stack Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="stack-item mx-auto">
+                            <div class="stack-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="stack-item-caption-content text-center text-white"><i>Docker</i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/stack/docker.png" alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about page">
             <div class="container">
@@ -140,9 +194,10 @@
                         <p class="lead">이 사이트를 통해 개발분야에 어떤 진로들이 있으며, 어떤 것을 공부해야하는지, 어떤 툴이나 라이브러리, 프레임워크가 있는지, 도움이 되는 사이트는 무엇이 있는지 간단하게라도 알아갔으면 좋겠습니다.</p>
                     </div>
                     <div class="col-lg-4 me-auto">
-                        <p class="lead">해당 웹사이트는 프론트: node js express, 백엔드: flask 환경을 기준으로 개발되었습니다.</p>
-                        <p class="lead">기초 css, html, vanilla js를 이용해서 개발했습니다. webpack 등으로 구조를 간단화할 예정입니다.</p>
-                        <p class="lead">정확히 동일하게 구현을 원하는 경우에는 Dockerfile이나 image를 통해 실험환경을 구성해주세요.</p>
+                        <p class="lead">해당 웹사이트는 프론트는 node js express, 백엔드는 flask 환경을 기준으로 개발되었습니다.</p>
+                        <p class="lead">front는 기초 css, html, vanilla js, nodejs를 이용해서 개발했습니다. webpack 등으로 구조를 간단화할 예정입니다.</p>
+                        <p class="lead">backend는 flask로 front 요청에 응답하는 구조로 만들었습니다. 사이트의 지속적 유지보수를 위해 만들었으며, CRUD와 REST API 기능을 제대로 추가할 것입니다.</p>
+                        <p class="lead">정확히 동일하게 구현을 원하는 경우에는 git readme 지시사항에 따라 Dockerfile을 통해서 실험환경을 구성해주세요.</p>
                     </div>
                 </div>
                 <!-- About Section Button-->
@@ -167,8 +222,8 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">안녕하세요 저는 서울과학기술대학교 산업정보시스템 전공 재학중인 진윤태입니다. 저는 데이터 엔지니어 분야를 목표로 공부하고 있습니다.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">아래는 간단한 노션 자기소개 페이지입니다.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">안녕하세요 저는 서울과학기술대학교 산업정보시스템 전공 재학중인 진윤태입니다. 저는 데이터 엔지니어 분야를 목표로 공부하고 있습니다. 주 사용언어는 Python이고 다양한 stack을 공부 중입니다.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">산업정보시스템 전공 3학년 재학 중이며 데이터사이언스 대학원 진학을 목표로 하고 있습니다. 현재는 각종 프로젝트와 개인연구를 하고 있습니다. 아래는 간단한 노션 자기소개 페이지입니다.</p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
@@ -195,10 +250,10 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/yuntae_profile/"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/yuntae_profile/"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/yuntae_profile/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/yuntae_profile/"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">

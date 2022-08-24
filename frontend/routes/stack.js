@@ -1,13 +1,12 @@
 const express = require('express');
 const request = require('sync-request');
 
-
 const router = express.Router();
 
-function carrer_box(carrer_name, simple_explane, youtube_link){
+function stack_box(stack_name, simple_explane, youtube_link){
     return `
     <div class="explane-box" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; border-radius: 0.5em;">
-        <h1>What is ${carrer_name} ?</h1>
+        <h1>What is ${stack_name} ?</h1>
         <p>${simple_explane}</p>
     </div>
     <div class="video-container" style="text-align: center;">
@@ -31,7 +30,6 @@ function curriculum_box(curriculum_image) {
     `
 };
 
-
 router.use(express.static('public'));
 
 router.get("/", (req, res) => {
@@ -39,17 +37,17 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:name", (req, res) => {
+
     console.log(`${req.params.name}`);
-    back_url = `http://127.0.0.1:50569/api/carrer/${req.params.name}`;
+    back_url = `http://127.0.0.1:50569/api/stack/${req.params.name}`;
 
     obj = JSON.parse((request('GET', back_url)).getBody().toString());
     
-    carrer_name = obj.real_name;
+    stack_name = obj.real_name;
     simple_explane = obj.simple_explane;
     youtube_link = obj.basic_youtube;
     curriculum_image = obj.curriculum_image;
-    base_curriculum_image = obj.base_curriculum_image;
-
+    implementation_or_famous_image = obj.implementation_or_famous_image;
 
     var output = `
     <!DOCTYPE html>
@@ -80,9 +78,9 @@ router.get("/:name", (req, res) => {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#carrer">Carrer</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Stack">Stack</a></li>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#curriculum">Curriculum</a></li>
-                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#base curriculum">Base curriculum</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#implementation">implementaion or famous</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,10 +110,10 @@ router.get("/:name", (req, res) => {
                 </div>
             </header>
             <!-- Carrer Section-->
-            <section class="page-section carrer" id="carrer">
+            <section class="page-section carrer" id="Stack">
                 <div class="container">
                     <!-- carrer Section Heading-->
-                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Carrer</h2>
+                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Stack</h2>
                     <!-- Icon Divider-->
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
@@ -123,7 +121,7 @@ router.get("/:name", (req, res) => {
                         <div class="divider-custom-line"></div>
                     </div>
                     
-                    ${carrer_box(carrer_name, simple_explane, youtube_link)}
+                    ${stack_box(stack_name, simple_explane, youtube_link)}
                 </div>
             </section>
             <!-- About Section-->
@@ -142,10 +140,10 @@ router.get("/:name", (req, res) => {
                 </div>
             </section>
             <!-- About Section-->
-            <section class="page-section bg-secondary text-white mb-0" id="base curriculum">
+            <section class="page-section bg-secondary text-white mb-0" id="implementation">
                 <div class="container">
                     <!-- About Section Heading-->
-                    <h2 class="page-section-heading text-center text-uppercase text-white">base curriculum</h2>
+                    <h2 class="page-section-heading text-center text-uppercase text-white">implementation or famous</h2>
                     <!-- Icon Divider-->
                     <div class="divider-custom divider-light">
                         <div class="divider-custom-line"></div>
@@ -154,7 +152,7 @@ router.get("/:name", (req, res) => {
                     </div>
                     <!-- About Section Content-->
                     <div class="row">
-                        <img src=${base_curriculum_image}>
+                        <img src=${implementation_or_famous_image}>
                     </div>
                 </div>
             </section>
@@ -199,7 +197,11 @@ router.get("/:name", (req, res) => {
             
         </body>
     </html>    
-    `
+    `;
+
     res.send(output);
+
+
+
 });
-module.exports = router;
+module.exports=router;
