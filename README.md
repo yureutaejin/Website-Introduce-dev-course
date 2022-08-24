@@ -9,6 +9,7 @@
 제공 서비스는 진로 소개, stack, 도움이 되는 영상, 로드맵 pdf, 기초적인 사진 등을 제공하려 한다.
 
 # implementation
+![Architecture](https://user-images.githubusercontent.com/85734054/186342042-266b75b4-fc67-4372-8b5a-f6e81cd02384.PNG)
 
 메인 정적 페이지(index.html)를 두고 각 서비스는 이미지를 클릭해서 이동하도록 한다. (addeventlistener)
 
