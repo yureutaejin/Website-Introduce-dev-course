@@ -14,14 +14,13 @@ services:
     command: tail -f /dev/null
   
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: node:current-bullseye
 
     ports:
       - 80:3000
     volumes:
       - ./frontend/:/home/
+    working_dir: /home
     depends_on:
       - backend
     command: bash -c "npm install && node app.js && tail -f /dev/null"
