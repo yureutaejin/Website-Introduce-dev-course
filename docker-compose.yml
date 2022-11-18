@@ -24,4 +24,4 @@ services:
       - ./frontend/:/home/
     depends_on:
       - backend
-    command: tail -f /dev/null
+    command: "npm start && tail -f /dev/null"

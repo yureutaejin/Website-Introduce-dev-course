@@ -6,8 +6,6 @@ RUN apt-get install vim -y
 
 WORKDIR /home
 
-RUN npm install
-
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "install"]
