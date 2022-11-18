@@ -24,4 +24,4 @@ services:
       - ./frontend/:/home/
     depends_on:
       - backend
-    command: "npm start && tail -f /dev/null"
+    command: bash -c "npm install && node app.js && tail -f /dev/null"
