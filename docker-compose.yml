@@ -3,15 +3,14 @@ version: '3.7'
 services:
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: python:3.7-bullseye
 
     ports:
       - 8001:5000
     volumes:
       - ./backend/:/home/
-    command: tail -f /dev/null
+    working_dir: /home
+    command: bash -c "pip install flask && python server.py && tail -f /dev/null"
   
   frontend:
     image: node:current-bullseye
@@ -23,4 +22,4 @@ services:
     working_dir: /home
     depends_on:
       - backend
-    command: bash -c "npm install && node app.js && tail -f /dev/null"
+    command: bash -c "npm install && node server.js && tail -f /dev/null"
