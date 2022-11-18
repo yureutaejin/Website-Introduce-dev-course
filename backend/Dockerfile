@@ -1,14 +1,11 @@
-FROM python:3.7-buster
+FROM python:3.7-bullseye
 
 RUN apt-get update && apt-get install git -y
 RUN echo "git install"
 RUN apt-get install vim -y
-
 RUN pip install flask
 
-WORKDIR /app
-
-COPY . /app
+WORKDIR /home
 
 EXPOSE 5000
 

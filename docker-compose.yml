@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    ports:
+      - 8001:5000
+    volumes:
+      - ./backend/:/home/
+    command: tail -f /dev/null
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    ports:
+      - 80:3000
+    volumes:
+      - ./frontend/:/home/
+    depends_on:
+      - backend
+    command: tail -f /dev/null
