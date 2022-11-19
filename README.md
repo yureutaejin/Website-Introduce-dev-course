@@ -56,14 +56,8 @@ project 전체 git clone 후, docker-compose.yml 파일이 있는 경로까지 �
 ```sh
 git clone https://github.com/yureutaejin/univ_introduce_dev_course
 
-# ~~project에서 frontend, backend 폴더 내부에 각각 접근 후~~ -> project에서 docker-compose.yml있는 경로 접근 후  
-~~ docker build -t introducedevproject:front~~ .
-~~docker build -t introducedevproject:back~~ . 
+# project에서 docker-compose.yml있는 경로 접근 후   
 docker compose up -d or docker-compose up -d
-
-# 반드시 백엔드 외부 포트와 프론트엔드 외부 포트가 달라야합니다.
-~~ docker run -it -d -p [local port1]:3000 --name introduce_dev_front introducedevproject:front~~
-~~docker run -it -d -p [local port2]:5000 --name introduce_dev_back introducedevproject:back~~
 ```
 
 ~~실행이 되지 않는다면 각 container에 docker attach로 접근하고 프론트는 npm start, 백은 python server.py 하시면 됩니다.~~
