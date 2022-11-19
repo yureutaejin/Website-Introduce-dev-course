@@ -29,7 +29,8 @@
 
 해당 파이프라인은 github page나 AWS S3와 같은 정적 페이지 호스팅 공간에서는 구현이 불가능하므로 AWS EC2 인스턴스 서버를  할당받아서 배포했다. https 제공을 고려해 도메인은 github student package로 무료로 구입해서 route 53에 등록했다.
 
-배포는 github와 docker을 활용해 구성했다. 프론트, 백 각각 dockerfile을 구성하고 서버에서 image build 및 run을 하면 바로 깃허브에서 pull을 통해 연결 및 배포가 완료된다.
+~~배포는 github와 docker을 활용해 구성했다. 프론트, 백 각각 dockerfile을 구성하고 서버에서 image build 및 run을 하면 바로 깃허브에서 pull을 통해 연결 및 배포가 완료된다.~~  
+(수정완료) github를 통해서 clone만 한다면, docker-compose를 통해서 별다른 명령어 없이 프론트, 백 WAS를 한번에 작동시킬 수 있다.  
 
 해당 페이지는 초보 개발자를 위해서 만들었으며, 웹프레임워크를 활용한다면 훨씬 효율적이게 구현이 가능할 것이다. 따라서 해당 페이지 또한 초보 개발자가 쉽게 접하고 구현을 재현할 수 있도록 dockerfile과 재현 방법을 모두 github에 제공한다.
 
@@ -49,20 +50,22 @@ domain => github student pack
 인스턴스 할당하고 router 53을 사용해 도메인 등록 완료했습니다.
 
 ## local implementation test
-project 전체 git clone 후, fronend, backend DockerFile 각각 build하고 container 구동하면 됩니다.
+~~project 전체 git clone 후, fronend, backend DockerFile 각각 build하고 container 구동하면 됩니다.~~. 
+project 전체 git clone 후, docker-compose.yml 파일이 있는 경로까지 접근해서 docker-compose up -d or docker compose up -d 명령어를 실행하면 됩니다,
 
 ```sh
 git clone https://github.com/yureutaejin/univ_introduce_dev_course
 
-# project에서 frontend, backend 폴더 내부에 각각 접근 후
-docker build -t introducedevproject:front .
-docker build -t introducedevproject:back .
+# ~~project에서 frontend, backend 폴더 내부에 각각 접근 후~~ -> project에서 docker-compose.yml있는 경로 접근 후  
+~~ docker build -t introducedevproject:front~~ .
+~~docker build -t introducedevproject:back~~ . 
+docker compose up -d or docker-compose up -d
 
 # 반드시 백엔드 외부 포트와 프론트엔드 외부 포트가 달라야합니다.
-docker run -it -d -p [local port1]:3000 --name introduce_dev_front introducedevproject:front
-docker run -it -d -p [local port2]:5000 --name introduce_dev_back introducedevproject:back
+~~ docker run -it -d -p [local port1]:3000 --name introduce_dev_front introducedevproject:front~~
+~~docker run -it -d -p [local port2]:5000 --name introduce_dev_back introducedevproject:back~~
 ```
 
-실행이 되지 않는다면 각 container에 docker attach로 접근하고 프론트는 npm start, 백은 python server.py 하시면 됩니다.
-이후엔 127.0.0.1:[local port1]으로 접근하면 됩니다.
-서버 배포의 경우에, 포트포워딩에 따라 달라질 수 있는데. carrer.js랑 stack.js의 back_url 변수 값을 변경해주시면 됩니다. 백엔드에서 curl http://{api 주소} 로 먼저 return 값이 나오는지 확인해보세요. 나온다면 해당 주소로 back_url을 변경해주면 됩니다.
+~~실행이 되지 않는다면 각 container에 docker attach로 접근하고 프론트는 npm start, 백은 python server.py 하시면 됩니다.~~
+~~이후엔 127.0.0.1:[local port1]으로 접근하면 됩니다.~~
+~~서버 배포의 경우에, 포트포워딩에 따라 달라질 수 있는데. carrer.js랑 stack.js의 back_url 변수 값을 변경해주시면 됩니다. 백엔드에서 curl http://{api 주소} 로 먼저 return 값이 나오는지 확인해보세요. 나온다면 해당 주소로 back_url을 변경해주면 됩니다.~~
