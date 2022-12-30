@@ -4,7 +4,8 @@
 # Introduction
 초보 개발자를 위한 introduction 웹사이트
 
-주소: ~~http://introducedevcourseyureutaejin.tech/ ~~
+주소: ~~http://introducedevcourseyureutaejin.tech/ ~~. 
+aws instance 제거
 
 # 구현 제한 조건 (강의)  
 - javascript 및 기초적인 html을 사용할 것 (웹프레임워크를 사용하지 않도록)  
