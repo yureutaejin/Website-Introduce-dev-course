@@ -4,7 +4,7 @@
 # Introduction
 초보 개발자를 위한 introduction 웹사이트
 
-주소: ~~http://introducedevcourseyureutaejin.tech/ ~~.   
+주소: ~~http://introducedevcourseyureutaejin.tech/~~.   
 aws instance 제거
 
 # 구현 제한 조건 (강의)  
